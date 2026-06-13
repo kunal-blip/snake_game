@@ -28,3 +28,8 @@ snake_speed = 15 # snake base speed
 # font styles for the game
 font_style = pg.font.SysFont("comicsans", 20)
 score_font = pg.font.SysFont("calibri", 26)
+
+# function to display the score of the game
+def user_score(score):
+    number = score_font.render("Score: " + str(score), True, red) # render the score text with the score value
+    window.blit(number, [0, 0]) # display the score at the top left corner of the window
